@@ -1,188 +1,48 @@
-Skip to content
-ranjanar18
-EXP-3-Prompt-Engineering
-Repository navigation
-Code
-Pull requests
-Actions
-Projects
-Security and quality
-Insights
-Files
-Go to file
-t
-T
-README.md
-You’re making changes in a project you don’t have write access to. Submitting a change will write it to a new branch in your fork Subishesh/EXP-3-Prompt-Engineering, so you can send a pull request.
-EXP-3-Prompt-Engineering
-/
-README.md
-in
-main
-
-Edit
-
-Preview
-Indent mode
-
-Spaces
-Indent size
-
-2
-Line wrap mode
-
-Soft wrap
-Editing README.md file contents
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
-137
-138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152
-153
-154
-155
-156
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175
-176
-177
-178
-179
-180
 # EXP-3-PROMPT-ENGINEERING-
 
-ChatGPT Output:
-Renewable energy like solar, wind, and hydropower cut fossil fuel reliance and emissions. They are sustainable but face hurdles with storage, grid integration, and cost.
-Result: Balanced, concise, accurate → Excellent
+## Aim: 
+Evaluation of 2024 Prompting Tools Across Diverse AI Platforms: 
+ChatGPT, Claude, Bard, Cohere Command, and Meta
+Experiment:
+Within a specific use case (e.g., summarizing text, answering technical questions), compare the performance, user experience, and response quality of prompting tools across these different AI platforms.
 
-Claude Output:
-Solar, wind, and hydropower reduce fossil fuel use and carbon emissions. Despite sustainability, challenges exist in storage, grid integration, and affordability.
-Result: Clear, professional tone → Very Good
+## Algorithm:
+To achieve the comparative results outlined in the report, a standardized evaluation algorithm and a multi-tiered prompting strategy were employed across all platforms.
 
-Bard/Gemini Output:
-Renewables replace fossil fuels and cut emissions. They are sustainable but limited by storage and costs.
-Result: Concise, beginner-friendly → Good
+The Evaluation Algorithm The following algorithm was used to ensure parity across ChatGPT, Claude, Gemini, Cohere, and Meta:
+Initialization: Set the "System Temperature" to a neutral value (approx. 0.7) where applicable to balance creativity and factual precision.
 
-Cohere Command Output:
-Renewable sources such as solar, wind, and hydropower provide sustainable, low-carbon alternatives but are constrained by storage, integration, and economic barriers.
-Result: Structured, technical → Very Good
+Input Standardization: Feed the exact same "Base Prompt" into each model’s primary chat interface simultaneously to prevent temporal data bias.
 
-Meta AI Output:
-Solar, wind, and hydropower reduce fossil fuel use but face issues of storage, grid integration, and cost.
-Result: Factual but shallow → Average
-## Case 4: Creative Writing Prompt
+Execution Phase:
 
-Prompt:
-“Write a short motivational message for students preparing for exams.”
+Task A (Summarization): Input a 1,000-word technical research paper.
 
-ChatGPT Output:
-Success in exams comes from steady effort, not last-minute stress. Believe in your preparation and stay confident—your hard work will shine through.
-Result: Inspiring, empathetic, clear → Excellent
+Task B (Technical Q&A): Ask a complex architectural question regarding Transformer models.
 
-Claude Output:
-Exams are a chance to show what you’ve learned. Approach them with calm focus, and remember that perseverance matters more than perfection.
-Result: Thoughtful, polished, slightly formal → Very Good
+Metric Collection:
 
-Bard/Gemini Output:
-Study well, stay calm, and believe in yourself. You can do it!
-Result: Clear, very simple, beginner-friendly → Good
+Record Latency (time to first token).
 
-Cohere Command Output:
-Student success lies in disciplined study, consistent practice, and self-trust. Exams are milestones, not final judgments.
-Result: Strong tone, slightly technical phrasing → Good
+Record Token Count (verbosity).
 
-Meta AI Output:
-Work hard, stay calm, and you will succeed in exams.
-Result: Correct but too basic, minimal detail → Average
+Assess Constraint Adherence (did it follow formatting rules?).
 
-## Case 5: Definition/Concept Explanation
+Scoring: Use a double-blind human review to assign a Reasoning Score out of 10.
 
-Prompt:
-“Explain the concept of Internet of Things (IoT) in simple terms.”
+The Benchmark Prompts The experiment utilized high-density prompts designed to test the limits of instruction following.
+A. The Summarization Prompt "You are an expert technical editor. Summarize the provided research paper into exactly three bullet points for an executive audience. Focus exclusively on methodology, results, and limitations. Use professional language and do not exceed 150 words total. Do not include an intro or outro."
 
-ChatGPT Output:
-The Internet of Things (IoT) connects everyday devices—like watches, cars, or home appliances—to the internet so they can share data and work smarter. For example, a smart fridge can track food or a smartwatch can monitor your health.
-Result: Accurate, clear, relatable → Excellent
+B. The Technical Q&A Prompt "Explain the 'Attention Mechanism' in Transformer architectures. Your explanation must be suitable for a Senior Software Engineer who is new to AI. Include a brief comparison to Recurrent Neural Networks (RNNs) and use one analogy. Ensure the response is factually rigorous and avoids fluff."
 
-Claude Output:
-IoT refers to ordinary objects being connected online so they can communicate and be controlled. It makes systems more efficient, from smart homes to industrial monitoring.
-Result: Correct, clear, professional → Very Good
+Strategy Analysis Claude 3.5 Sonnet: Excelled at the Summarization Prompt due to its superior adherence to "negative constraints" (e.g., "Do not include an intro").
+GPT-4o: Was the most efficient for Technical Q&A, providing the highest information density in the shortest response time.
 
-Bard/Gemini Output:
-IoT means devices like cars, phones, or lights connect to the internet and talk to each other.
-Result: Beginner-friendly, lacks depth → Good
+Gemini 1.5 Pro: Outperformed others when the "Base Prompt" included extremely large source files, thanks to its massive context window.
 
-Cohere Command Output:
-IoT is a network of connected devices that collect and share data over the internet. It integrates sensors, communication protocols, and cloud platforms for real-time intelligence.
-Result: Strong technical explanation, slightly jargon-heavy → Good
+## Prompt
 
-Meta AI Output:
-IoT connects devices to the internet so they can share information.
-Result: Very basic, shallow detail → Average
+The experiment utilized two specific types of prompts to evaluate the performance of ChatGPT, Claude, Gemini, Cohere, and Meta. These were designed to test both high-density summarization and technical reasoning capabilities. 1. The Summarization PromptThis prompt was used to evaluate the models' ability to distill complex information while adhering to strict formatting constraints: "You are an expert technical editor. Summarize the provided research paper into exactly three bullet points for an executive audience. Focus exclusively on methodology, results, and limitations. Use professional language and do not exceed 150 words total. Do not include an intro or outro.
 
-## Comparison Table:
-
-<img width="3000" height="900" alt="ai_platforms_comparison" src="https://github.com/user-attachments/assets/6197366e-6d39-4a0d-8ec3-c0689aa3b639" />
-<img width="2400" height="1500" alt="ai_platforms_avg_performance" src="https://github.com/user-attachments/assets/db241f26-4be1-4691-9460-d0bedcdd3254" />
-Use Control + Shift + m to toggle the tab key moving focus. Alternatively, use esc then tab to move to the next interactive element on the page.
-No file chosen
-Attach files by dragging & dropping, selecting or pasting them.
- 
+## Output
+[exp 3.pdf](https://github.com/user-attachments/files/27941228/exp.3.pdf)
